@@ -1,15 +1,12 @@
-const Vigenere = require('caesar-salad').Vigenere;
 const express = require('express');
+const cors = require('cors');
+const cipher = require('./app/cipher');
 
 const app = express();
-const port = 8000;
+const port = 8300;
 
-app.get('/encode/:text', (req, res) => {
-    res.send(Vigenere.Cipher('password').crypt(req.params.text))
-});
-
-app.get('/decode/:text', (req, res) => {
-    res.send(Vigenere.Decipher('password').crypt(req.params.text));
-});
+app.use(cors());
+app.use(express.json());
+app.use('/', cipher);
 
 app.listen(port);
