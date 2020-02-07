@@ -3,7 +3,7 @@ const cors = require('cors');
 const cipher = require('./app/cipher');
 
 const app = express();
-const port = 8300;
+const port = 8000;
 
 app.use(cors());
 app.use(express.json());

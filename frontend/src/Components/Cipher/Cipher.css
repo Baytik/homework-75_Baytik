@@ -30,3 +30,7 @@ button {
     font-size: 18px;
     padding: 3px 10px;
 }
+p {
+    text-align: center;
+    margin-right: 25%;
+}
